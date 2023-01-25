@@ -3,7 +3,7 @@ from vision import Vision
 from matplotlib import pyplot as plt
 
 # load the trained model
-cascade_limestone = cv.CascadeClassifier('2.3cascade/cascade.xml')
+cascade_limestone = cv.CascadeClassifier('cascade/cascade.xml')
 
 # load an empty Vision class
 vision_limestone = Vision(None)

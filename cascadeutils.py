@@ -1,14 +1,5 @@
 import os
 
-
-# reads all the files in the /negative folder and generates neg.txt from them.
-# we'll run it manually like this:
-# $ python
-# Python 3.8.0 (tags/v3.8.0:fa919fd, Oct 14 2019, 19:21:23) [MSC v.1916 32 bit (Intel)] on win32
-# Type "help", "copyright", "credits" or "license" for more information.
-# >>> from cascadeutils import generate_negative_description_file
-# >>> generate_negative_description_file()
-# >>> exit()
 def generate_negative_description_file():
     # open the output file for writing. will overwrite all existing data in there
     with open('2neg.txt', 'w') as f:
@@ -16,6 +7,7 @@ def generate_negative_description_file():
         for filename in os.listdir('2negative'):
             f.write('2negative/' + filename + '\n')
 generate_negative_description_file()
+
 # the opencv_annotation executable can be found in opencv/build/x64/vc15/bin
 # generate positive description file using:
 # $ C:/Users/Ben/learncodebygaming/opencv/build/x64/vc15/bin/opencv_annotation.exe --annotations=pos.txt --images=positive/
